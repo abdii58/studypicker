@@ -4,23 +4,24 @@
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script type="text/javascript" src="http://mgskjaeveland.github.io/sgvizler/v/0.6/sgvizler.js"></script>
 	
-<script type="text/javascript">
-      sgvizler
-          .defaultEndpointOutputFormat('json')
-          .prefix('foaf', 'http://xmlns.com/foaf/0.1/')
-          .prefix('geo',  'http://www.w3.org/2003/01/geo/wgs84_pos#')
-          .prefix('dbp',  'http://dbpedia.org/resource/');
-      
-      //// Leave this as is. Ready, steady, go!
-      $(document).ready(sgvizler.containerDrawAll);
+<script>
+         sgvizler
+             .prefix("ex", "http://example.org#")
+             .defaultEndpointURL("http://dbpedia.org/sparql")
+             .defaultQuery("SELECT * { ?a ?b ?c, ?d, ?e } LIMIT 7")
+             .defaultChartFunction("sgvizler.visualization.Table")
+             .defaultChartWidth(500)
+             .defaultChartHeight(500);
     </script>
-<div id="myForm"></div>
-<script type="text/javascript">
-  $(document).ready(function() { sgvizler.formDraw("myForm"); });
-</script>
-  </head>  
 
 <body>
+	
+    <p>Please allow the page to load for a few seconds.</p>
+  <div id="myForm"></div>
+  <script type="text/javascript">
+    $(document).ready(function() { sgvizler.formDraw("myForm"); });
+  </script>
+
 <div id="example"
          data-sgvizler-endpoint="http://sws.ifi.uio.no/sparql/npd"
          data-sgvizler-query="SELECT ?class (count(?instance) AS ?noOfInstances)
