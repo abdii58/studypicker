@@ -52,26 +52,27 @@
 
 <div id="logo"><a href="http://dev.data2000.no/sgvizler/"><img src="http://beta.data2000.no/sgvizler/misc/image/mr.sgvizler.png" alt="mr.sgvizler.png"></a><br>Mr. Sgvizler
          
-      </div>
-      <h3><code>sgvizler.visualization.Map</code>: Plot of most of the muncipalities of Rogaland, Norway
-      </h3>
-      <p></p>
-      <div id="sgvzl_example_query" data-sgvizler-endpoint="http://dbpedia.org/sparql" data-sgvizler-query="SELECT ?lat ?long ?name ?text ?url ?image WHERE { ?url a dbpo:AdministrativeRegion ; dct:subject <http://dbpedia.org/resource/Category:Municipalities_of_Rogaland&gt; ; rdfs:label ?name; geo:lat ?lat; geo:long ?long . OPTIONAL{ ?url rdfs:comment ?text } OPTIONAL{ ?url dbpo:thumbnail ?image } FILTER(lang(?text)=&#34;en&#34;) FILTER(lang(?name)=&#34;en&#34;) }" data-sgvizler-chart="sgvizler.visualization.Map" data-sgvizler-loglevel="2" style="width:800px; height:600px;"></div>
-      <p>The element which draws the above chart:</p><pre id="sgvzl_example_pre">&lt;div id="sgvzl_example_query" 
-   data-sgvizler-endpoint="http://dbpedia.org/sparql" 
-   data-sgvizler-query="SELECT ?lat ?long ?name ?text ?url ?image WHERE { ?url a dbpo:AdministrativeRegion ; dct:subject &amp;lt;http://dbpedia.org/resource/Category:Municipalities_of_Rogaland&gt; ; rdfs:label ?name; geo:lat ?lat; geo:long ?long . OPTIONAL{ ?url rdfs:comment ?text } OPTIONAL{ ?url dbpo:thumbnail ?image } FILTER(lang(?text)=&amp;quot;en&amp;quot;) FILTER(lang(?name)=&amp;quot;en&amp;quot;) }" 
-   data-sgvizler-chart="sgvizler.visualization.Map" 
-   data-sgvizler-loglevel="2" 
-   style="width:800px; height:600px;"/&gt;</pre><h3>The results of the query in <code>gTable</code></h3>
-      <div id="sgvzl_example_table" data-sgvizler-endpoint="http://dbpedia.org/sparql" data-sgvizler-query="SELECT ?lat ?long ?name ?text ?url ?image WHERE { ?url a dbpo:AdministrativeRegion ; dct:subject <http://dbpedia.org/resource/Category:Municipalities_of_Rogaland&gt; ; rdfs:label ?name; geo:lat ?lat; geo:long ?long . OPTIONAL{ ?url rdfs:comment ?text } OPTIONAL{ ?url dbpo:thumbnail ?image } FILTER(lang(?text)=&#34;en&#34;) FILTER(lang(?name)=&#34;en&#34;) }" data-sgvizler-chart="google.visualization.Table" data-sgvizler-loglevel="2" style="width:800px; height:200px;"></div>
-      <div id="footer">
-         <!--Please leave a link to the Sgvizler homepage.-->
-         <p>
-            	Sgvizler visualizes the result of SPARQL SELECT queries. For more
-            	information, see the <a href="http://dev.data2000.no/sgvizler/">Sgvizler</a>
-            	homepage. (c) 2011--2013 Martin G. Skjæveland.
-            
-         </p>
-      </div>
+<div id="sgvzl_example31"
+	 data-sgvizler-endpoint="http://sws.ifi.uio.no/sparql/from"
+	 data-sgvizler-rdf="http://folk.uio.no/martige/foaf|http://folk.uio.no/martingi/foaf.rdf"
+	 data-sgvizler-query="SELECT *
+			      WHERE{?s foaf:knows ?o}
+			      LIMIT 10"
+	 data-sgvizler-chart="google.visualization.Table"
+	 data-sgvizler-loglevel="2"
+	 style="height:400px"
+	 ></div>
+
+    <div id="footer">
+      <!-- Please leave a link to the Sgvizler homepage --> 
+      <p>
+	Sgvizler visualizes the result of SPARQL SELECT queries. For more
+	information, see
+	the <a href="http://dev.data2000.no/sgvizler/">Sgvizler</a>
+	homepage. (c)
+	2011-2013 Martin G. Skj&#230;veland.
+      </p>
+    </div>
+    
 </body>
 </html>
