@@ -14,6 +14,10 @@
       //// Leave this as is. Ready, steady, go!
       $(document).ready(sgvizler.containerDrawAll);
     </script>
+<div id="myForm"></div>
+<script type="text/javascript">
+  $(document).ready(function() { sgvizler.formDraw("myForm"); });
+</script>
   </head>  
 
 <body>
@@ -51,28 +55,5 @@
 
 <button type="button" onclick="alert('Results')">Show Results</button>
 
-<div id="example"
-     data-sgvizler-endpoint="http://sws.ifi.uio.no/sparql/npd"
-     data-sgvizler-query="SELECT ?class (count(?instance) AS ?noOfInstances)
-                          WHERE{ ?instance a ?class }
-                          GROUP BY ?class
-                          ORDER BY ?class"
-     data-sgvizler-chart="google.visualization.PieChart"
-     style="width:800px; height:400px;"></div>
-
-
-<div id="logo"><a href="http://dev.data2000.no/sgvizler/"><img src="http://beta.data2000.no/sgvizler/misc/image/mr.sgvizler.png" alt="mr.sgvizler.png"></a><br>Mr. Sgvizler
-         
-<div id="myExample"
-     data-sgvizler-endpoint="http://sws.ifi.uio.no/sparql/npd"
-     data-sgvizler-query="SELECT ?class (count(?instance) AS ?noOfInstances)
-                          WHERE{ ?instance a ?class }
-                          GROUP BY ?class
-                          ORDER BY ?class"
-     data-sgvizler-chart="google.visualization.PieChart"
-     data-sgvizler-chart-options="is3D=true|title=Number of instances"
-     style="width:800px; height:400px;"></div>
-
-    
 </body>
 </html>
