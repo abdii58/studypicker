@@ -34,6 +34,14 @@
 
 <button type="button" onclick="alert('Results')">Show Results</button>
 
-
+<div id="example"
+     data-sgvizler-endpoint="http://sws.ifi.uio.no/sparql/npd"
+     data-sgvizler-query="SELECT ?class (count(?instance) AS ?noOfInstances)
+                          WHERE{ ?instance a ?class }
+                          GROUP BY ?class
+                          ORDER BY ?class"
+     data-sgvizler-chart="google.visualization.PieChart"
+     style="width:800px; height:400px;"></div>
+     
 </body>
 </html>
