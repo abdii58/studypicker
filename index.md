@@ -3,6 +3,17 @@
  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.js"></script>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script type="text/javascript" src="http://mgskjaeveland.github.io/sgvizler/v/0.6/sgvizler.js"></script>
+	
+<script type="text/javascript">
+      sgvizler
+          .defaultEndpointOutputFormat('json')
+          .prefix('foaf', 'http://xmlns.com/foaf/0.1/')
+          .prefix('geo',  'http://www.w3.org/2003/01/geo/wgs84_pos#')
+          .prefix('dbp',  'http://dbpedia.org/resource/');
+      
+      //// Leave this as is. Ready, steady, go!
+      $(document).ready(sgvizler.containerDrawAll);
+    </script>
   </head>  
 
 <body>
