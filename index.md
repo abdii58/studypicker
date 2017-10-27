@@ -63,27 +63,16 @@
 
 <div id="logo"><a href="http://dev.data2000.no/sgvizler/"><img src="http://beta.data2000.no/sgvizler/misc/image/mr.sgvizler.png" alt="mr.sgvizler.png"></a><br>Mr. Sgvizler
          
-<div id="sgvzl_example31"
-	 data-sgvizler-endpoint="http://sws.ifi.uio.no/sparql/from"
-	 data-sgvizler-rdf="http://folk.uio.no/martige/foaf|http://folk.uio.no/martingi/foaf.rdf"
-	 data-sgvizler-query="SELECT *
-			      WHERE{?s foaf:knows ?o}
-			      LIMIT 10"
-	 data-sgvizler-chart="google.visualization.Table"
-	 data-sgvizler-loglevel="2"
-	 style="height:400px"
-	 ></div>
+<div id="myExample"
+     data-sgvizler-endpoint="http://sws.ifi.uio.no/sparql/npd"
+     data-sgvizler-query="SELECT ?class (count(?instance) AS ?noOfInstances)
+                          WHERE{ ?instance a ?class }
+                          GROUP BY ?class
+                          ORDER BY ?class"
+     data-sgvizler-chart="google.visualization.PieChart"
+     data-sgvizler-chart-options="is3D=true|title=Number of instances"
+     style="width:800px; height:400px;"></div>
 
-    <div id="footer">
-      <!-- Please leave a link to the Sgvizler homepage --> 
-      <p>
-	Sgvizler visualizes the result of SPARQL SELECT queries. For more
-	information, see
-	the <a href="http://dev.data2000.no/sgvizler/">Sgvizler</a>
-	homepage. (c)
-	2011-2013 Martin G. Skj&#230;veland.
-      </p>
-    </div>
     
 </body>
 </html>
