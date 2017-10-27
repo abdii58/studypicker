@@ -21,6 +21,15 @@
   </head>  
 
 <body>
+<div id="example"
+         data-sgvizler-endpoint="http://sws.ifi.uio.no/sparql/npd"
+         data-sgvizler-query="SELECT ?class (count(?instance) AS ?noOfInstances)
+                            WHERE{ ?instance a ?class }
+                            GROUP BY ?class
+                            ORDER BY ?class"
+         data-sgvizler-chart="google.visualization.PieChart"
+         style="width:800px; height:400px;"></div>	
+
 <h1>Having trouble with picking a study?</h1>
 <p>Search no further! Studypicker is the right tool for you! Just tick in some boxes and we will show you what you need! <br> This site will help you find your study, based on your preferences. You can filter by location (by city or province), field of study and whether the study is with a selection or not.<br> Go try it out! </p>
 
